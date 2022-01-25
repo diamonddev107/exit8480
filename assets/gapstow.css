@@ -32,8 +32,9 @@
     color: #2B355A;
     margin: 0;
     padding: 0;
+    text-transform: capitalize;
 }
-p {
+p, span {
     font-family: "Space Mono";
     font-style: normal;
     font-weight: normal;

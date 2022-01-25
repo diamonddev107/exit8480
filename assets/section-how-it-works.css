@@ -1,0 +1,127 @@
+.hiw-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hiw-block-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.hiw-block-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-right: 50px;
+}
+.hiw-heading, .hiw-text p {
+    color: #F7F7F2;    
+}
+.hiw-text {
+    padding-top: 16px;
+}
+.hiw-text p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 14px;
+}
+.hiw-text-content {
+    background: #CA8787;
+}
+.hiw-text-content-wrapper {
+    padding: 100px 50px 60px;
+}
+.hiw-item-text {
+    max-width: 135px;
+    padding: 0px 10px;
+    text-align: center;
+    align-items: flex-end;
+    display: flex;
+}
+.hiw-item-text span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.hiw-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hiw-item-image {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
+    padding: 30px 10px;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hiw-item-image img {
+    max-width: 100px;
+    height: 72px;
+}
+.hiw-item-image:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background: #2B355A;
+    border-radius: 50%;
+}
+@media (max-width: 960px) {
+    .hiw-heading {
+        font-size: 38px;
+    }
+    .hiw-text p {
+        font-size: 12px;
+    }
+    .hiw-item-text span {
+        font-size: 8px;
+    }
+    .hiw-item-image:before {
+        top: -7px;
+        width: 14px;
+        height: 14px;
+    }
+    .hiw-item-image img {
+        height: 42px;
+    }
+}
+@media (max-width: 749px) {
+    .hiw-wrapper {
+        background: #F2EDDE;
+        margin-top: -146px;
+    }
+    .hiw-block-content {
+        justify-content: center;
+    }
+    .hiw-block-content-wrapper {
+        padding: 50px 15px;
+    }
+    .hiw-heading {
+        text-align: center;
+        color: #2B355A;
+    }
+    .hiw-text p {
+        color: #2B355A;
+    }
+    .hiw-text-content {
+        background: unset;
+        z-index: 1;
+    }
+    .hiw-text-content-wrapper {
+        padding: 100px 30px 0px;
+    }
+    .hiw-item-image {
+        padding: 20px 5px 0px;
+        margin-top: 20px;
+    }
+    .hiw-item-text {
+        padding: 0 5px;
+        max-width: 80px;
+    }
+}
