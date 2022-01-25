@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Darker Grotesque';
+    src: url('DarkerGrotesque-ExtraBold.eot');
+    src: url('DarkerGrotesque-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('DarkerGrotesque-ExtraBold.woff2') format('woff2'),
+        url('DarkerGrotesque-ExtraBold.woff') format('woff'),
+        url('DarkerGrotesque-ExtraBold.ttf') format('truetype'),
+        url('DarkerGrotesque-ExtraBold.svg#DarkerGrotesque-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Space Mono';
+    src: url('SpaceMono-Regular.eot');
+    src: url('SpaceMono-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SpaceMono-Regular.woff2') format('woff2'),
+        url('SpaceMono-Regular.woff') format('woff'),
+        url('SpaceMono-Regular.ttf') format('truetype'),
+        url('SpaceMono-Regular.svg#SpaceMono-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.h1 {
+    font-family: "Darker Grotesque";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 55px;
+    letter-spacing: 0.01em;
+    color: #2B355A;
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #2B355A;
+    margin: 0;
+    padding: 0;
+}
+a.button {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.08em;
+    color: #2B355A;
+    background: #F7F7F2;
+    border: 2px solid #2B355A;
+    padding: 0px 24px;
+    min-height: 26px;
+    text-align: center;
+}
+
+@media (min-width: 750px) {
+    .medium-half {
+        width: 50%;
+    }
+}
+
+@media (max-width: 749px) {
+    .small-one {
+        width: 100%;
+    }
+    .small-half {
+        width: 50%;
+    }
+    a.button {
+        font-size: 11px;
+        min-height: 21px;
+        padding: 0 31px;
+    }
+}
+
+
+

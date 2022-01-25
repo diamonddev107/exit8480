@@ -1,0 +1,112 @@
+{{ 'section-main-banner.css' | asset_url | stylesheet_tag }}
+{% if section.settings.background_image != empty %}
+    {%- style -%}
+        .banner-wrapper {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-image: url({{ section.settings.background_image | img_url: "master" }});
+        }
+        @media (max-width: 749px) {
+            .banner-wrapper {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-image: url({{ section.settings.mobile_background_image | img_url: "master" }});
+            }   
+        }
+    {%- endstyle -%}
+{% else %}
+    {%- style -%}
+    .banner-wrapper {
+        background-color: {{ section.settings.background_color }};
+    }
+    {%- endstyle -%}
+{% endif %}
+<div class="banner-wrapper">
+    <div class="banner-content medium-half small-half">
+        <div class="content-wrapper">
+            <h2 class="h1 banner-heading">{{ section.settings.heading }}</h2>
+            {% if section.settings.sub_heading != empty %}
+            <h3 class="h2 banner-subheading">{{ section.settings.sub_heading }}</h3>
+            {% endif %}
+            <div class="banner-text">
+                <p>{{ section.settings.text }}</p>
+            </div>
+            <div class="banner__buttons">
+                <a href="{{ section.settings.btn_link }}" class="button button--primary">{{ section.settings.btn_text }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="banner-image medium-half small-half">
+        <img
+        srcset="{{ section.settings.main_image | img_url: 'master' }} {{ section.settings.main_image.width }}w"
+        sizes=""
+        src="{{ section.settings.main_image | img_url: '633x' }}"
+        loading="lazy"
+        alt="{{ section.settings.main_image.alt | escape }}"
+        width="{{ section.settings.main_image.width }}"
+        height="{{ section.settings.main_image.width | divided_by: section.settings.main_image.aspect_ratio }}">
+    </div>
+</div>
+{% schema %}
+{
+    "name": "Main banner",
+    "settings": [
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background color",
+            "default": "#F7F7F2"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background image"
+        },
+        {
+            "type": "image_picker",
+            "id": "mobile_background_image",
+            "label": "Mobile Background image"
+        },
+        {
+            "type": "image_picker",
+            "id": "main_image",
+            "label": "Main image"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Give The Gift of Home, Today."
+        },
+        {
+            "type": "text",
+            "id": "sub_heading",
+            "label": "Sub heading"
+        },
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Choose between three boxes to find the perfect gift for your friends and families new home. 100% of the proceeds go toward autism."
+        },
+        {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button title",
+            "default": "PICK MY BOX"
+        },
+        {
+            "type": "url",
+            "id": "btn_link",
+            "label": "Button link"
+        }
+    ],
+    "presets": [
+        {
+            "name":"Main banner"
+        }
+    ]
+}
+{% endschema %}
