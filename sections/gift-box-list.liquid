@@ -42,7 +42,7 @@
                     width="{{ block.settings.item_image.width }}"
                     height="{{ block.settings.item_image.width | divided_by: block.settings.item_image.aspect_ratio }}">
                 </div>
-                {% if section.settings.image_2 != empty %}
+                {% if section.settings.image_2 != blank %}
                     <div class="gbl-item-image-2-wrapper" style="{{ styling }}">
                         <div class="gbl-item-image-2">
                             <img
@@ -87,7 +87,7 @@
                     width="{{ block.settings.item_image.width }}"
                     height="{{ block.settings.item_image.width | divided_by: block.settings.item_image.aspect_ratio }}">
                 </div>
-                {% if section.settings.image_2 != empty %}
+                {% if section.settings.image_2 != blank %}
                     <div class="gbl-item-image-2-wrapper" style="{{ styling }}">
                         <div class="gbl-item-image-2">
                             <img

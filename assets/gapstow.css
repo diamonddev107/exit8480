@@ -11,6 +11,20 @@
     font-display: swap;
 }
 @font-face {
+    font-family: 'Darker Grotesque Regular';
+    src: url('DarkerGrotesque-Regular.eot');
+    src: url('DarkerGrotesque-Regular.eot?#iefix') format('embedded-opentype'),
+        url('DarkerGrotesque-Regular.woff2') format('woff2'),
+        url('DarkerGrotesque-Regular.woff') format('woff'),
+        url('DarkerGrotesque-Regular.ttf') format('truetype'),
+        url('DarkerGrotesque-Regular.svg#DarkerGrotesque-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
     font-family: 'Space Mono';
     src: url('SpaceMono-Regular.eot');
     src: url('SpaceMono-Regular.eot?#iefix') format('embedded-opentype'),
@@ -36,6 +50,16 @@ html {
     margin: 0;
     padding: 0;
     text-transform: capitalize;
+}
+.h3 {
+    font-family: "Darker Grotesque";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    padding-top: 30px;
 }
 span {
     display: block;

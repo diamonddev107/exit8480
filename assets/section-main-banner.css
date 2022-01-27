@@ -20,16 +20,45 @@
     align-items: center;
     justify-content: left;
     padding: 0px 50px 50px;
+    z-index: 2;
 }
 .banner-wrapper .content-wrapper {
     max-width: 411px;
 }
-.banner-wrapper .banner-heading {
+.banner-wrapper .banner-heading, .banner-wrapper .banner-subheading {
     margin: 0;
 }
 .banner-wrapper .content-wrapper .banner-text {
     padding: 20px 0px;
 }
+/* About Us page */
+.banner-wrapper.page-banner {
+    align-items: center;
+    z-index: -1;
+}
+.banner-wrapper.page-banner, .banner-wrapper.page-banner .banner-image {
+    min-height: 640px;
+}
+.banner-wrapper.page-banner .banner-heading {
+    text-transform: uppercase;
+}
+.banner-wrapper.page-banner .banner-text p {
+    font-family: "Darker Grotesque Regular";
+    font-size: 23px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+.banner-wrapper.page-banner .banner-content {
+    padding-right: 0;
+}
+.banner-wrapper.page-banner .content-wrapper {
+    max-width: unset;
+}
+.banner-wrapper.page-banner .banner-subheading, .banner-wrapper.page-banner .content-wrapper .banner-text {
+    max-width: 440px;
+}
+
 @media (max-width: 960px) {
     .banner-wrapper .banner-image img {
         position: relative;
@@ -43,6 +72,18 @@
     }
     .banner-wrapper, .banner-wrapper .banner-image {
         min-height: unset;
+    }
+    .banner-wrapper.page-banner, .banner-wrapper.page-banner .banner-image {
+        min-height: unset;
+    }
+    .banner-wrapper.page-banner .banner-subheading {
+        font-size: 20px;
+        line-height: 1.2;
+        padding-top: 15px;
+    }
+    .banner-wrapper.page-banner .banner-text p {
+        font-size: 14px;
+        line-height: 1.2;
     }
 }
 @media (max-width: 749px) {
@@ -66,5 +107,14 @@
     }
     .banner-wrapper .content-wrapper .banner-text {
         padding: 10px 0px;
+    }
+    .banner-wrapper.page-banner .banner-subheading {
+        font-size: 13px;
+    }
+    .banner-wrapper.page-banner .banner-text p {
+        font-size: 12px;
+    }
+    .banner-wrapper.page-banner .banner-content {
+        padding: 15px 0px 15px 15px;
     }
 }

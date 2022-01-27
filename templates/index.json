@@ -20,7 +20,7 @@
         "cc6403e1-46b5-4af0-ab57-5c1a7b607364": {
           "type": "text_and_image",
           "settings": {
-            "item_text": "Choose your ocassion",
+            "item_text": "Choose your occasion",
             "item_image": "shopify:\/\/shop_images\/Frame.png"
           }
         },
@@ -54,7 +54,7 @@
       ],
       "settings": {
         "heading": "how it works",
-        "text": "<p>Choose your ocassion you need a gift for, and we’ll ship it to either you or your   one.<\/p><p>Pick from the following ocassions: New Home, Real Estate Gifts, Option 3 or Option 4.<\/p>"
+        "text": "<p>Choose your occasion you need a gift for, and we’ll ship it to either you or your one.<\/p><p>Pick from the following occasions: New Home, Real Estate Gifts, Option 3 or Option 4.<\/p>"
       }
     },
     "1643142690da2a1377": {
@@ -68,7 +68,7 @@
             "background_color": "#adceb0",
             "item_heading": "NEW HOME",
             "item_heading_color": "#2b355a",
-            "item_subheading": "PERFECT FOR YOUR FRIENDS AND FAMILY WHO ARE NEW HOMEWONERS",
+            "item_subheading": "PERFECT FOR YOUR FRIENDS AND FAMILY WHO ARE NEW HOMEOWNERS",
             "item_subheading_color": "#2b355a",
             "item_text": "In support of Breast Cancer Awareness Month, BOXFOX is proud to announce that we will be donating 15% from  each of your purchases of our best selling PAMPER \/\/ PINK BOXFOX to the Breast Cancer Research Foundation. Shop the PAMPER \/\/ PINK this month & help us in the fight to find the cure!",
             "item_text_color": "#000000",
@@ -88,7 +88,7 @@
             "background_color": "#f2edde",
             "item_heading": "REAL ESTATE GIFTS",
             "item_heading_color": "#2b355a",
-            "item_subheading": "PERFECT FOR YOUR FRIENDS AND FAMILY WHO ARE NEW HOMEWONERS",
+            "item_subheading": "PERFECT FOR YOUR FRIENDS AND FAMILY WHO ARE NEW HOMEOWNERS",
             "item_subheading_color": "#2b355a",
             "item_text": "In support of Breast Cancer Awareness Month, BOXFOX is proud to announce that we will be donating 15% from each of your purchases of our best selling PAMPER \/\/ PINK BOXFOX to the Breast Cancer Research Foundation. Shop the PAMPER \/\/ PINK this month & help us in the fight to find the cure!",
             "item_text_color": "#000000",

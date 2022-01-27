@@ -1,5 +1,5 @@
 {{ 'section-main-banner.css' | asset_url | stylesheet_tag }}
-{% if section.settings.background_image != empty %}
+{% if section.settings.background_image != blank %}
     {%- style -%}
         .banner-wrapper {
             background-size: cover;
@@ -23,12 +23,12 @@
     }
     {%- endstyle -%}
 {% endif %}
-<div class="banner-wrapper">
+<div class="banner-wrapper {% if template contains "about-us" %}page-banner{% endif %}">
     <div class="banner-content medium-half small-half">
         <div class="content-wrapper">
             <h2 class="h1 banner-heading">{{ section.settings.heading }}</h2>
-            {% if section.settings.sub_heading != empty %}
-            <h3 class="h2 banner-subheading">{{ section.settings.sub_heading }}</h3>
+            {% if section.settings.sub_heading != blank %}
+            <h3 class="h3 banner-subheading">{{ section.settings.sub_heading }}</h3>
             {% endif %}
             <div class="banner-text">
                 <p>{{ section.settings.text }}</p>
@@ -87,7 +87,7 @@
             "label": "Sub heading"
         },
         {
-            "type": "text",
+           "type": "textarea",
             "id": "text",
             "label": "Text",
             "default": "Choose between three boxes to find the perfect gift for your friends and families new home. 100% of the proceeds go toward autism."
