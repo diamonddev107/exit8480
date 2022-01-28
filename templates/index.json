@@ -7,9 +7,9 @@
         "background_image": "shopify:\/\/shop_images\/Group_1.png",
         "mobile_background_image": "shopify:\/\/shop_images\/Vector_1.png",
         "main_image": "shopify:\/\/shop_images\/Layer_2_1.png",
-        "heading": "Give The Gift of Home, Today.",
+        "heading": "What a gift!",
         "sub_heading": "",
-        "text": "Choose between three boxes to find the perfect gift for your friends and families new home. 100% of the proceeds go toward autism.",
+        "text": "Choose between four boxes to find the perfect gift and support our mission to empower and employ adults on the autism spectrum.",
         "btn_text": "PICK MY BOX",
         "btn_link": "#"
       }
@@ -20,7 +20,7 @@
         "cc6403e1-46b5-4af0-ab57-5c1a7b607364": {
           "type": "text_and_image",
           "settings": {
-            "item_text": "Choose your occasion",
+            "item_text": "Choose your box",
             "item_image": "shopify:\/\/shop_images\/Frame.png"
           }
         },
@@ -54,7 +54,7 @@
       ],
       "settings": {
         "heading": "how it works",
-        "text": "<p>Choose your occasion you need a gift for, and we’ll ship it to either you or your one.<\/p><p>Pick from the following occasions: New Home, Real Estate Gifts, Option 3 or Option 4.<\/p>"
+        "text": "<p>Choose your box and we’ll ship it. Easy.<\/p><p>Pick from the following:<br\/>Snackin', Sippin', Spa or Home<\/p>"
       }
     },
     "1643142690da2a1377": {
@@ -63,14 +63,14 @@
         "16431426900c6c1368-0": {
           "type": "gift_box",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/il_340x270_1.png",
+            "item_image": "shopify:\/\/shop_images\/maddi-bazzocco-UhrHTmVBzzE-unsplash.jpg",
             "item_image_position": "left",
             "background_color": "#adceb0",
-            "item_heading": "NEW HOME",
+            "item_heading": "snackin'",
             "item_heading_color": "#2b355a",
-            "item_subheading": "PERFECT FOR YOUR FRIENDS AND FAMILY WHO ARE NEW HOMEOWNERS",
+            "item_subheading": "PERFECT FOR the foodie in your life",
             "item_subheading_color": "#2b355a",
-            "item_text": "In support of Breast Cancer Awareness Month, BOXFOX is proud to announce that we will be donating 15% from  each of your purchases of our best selling PAMPER \/\/ PINK BOXFOX to the Breast Cancer Research Foundation. Shop the PAMPER \/\/ PINK this month & help us in the fight to find the cure!",
+            "item_text": "Whether it's nuts or cookies that tickle your loved one's tastebuds, this box will surely be a hit!",
             "item_text_color": "#000000",
             "item_btn_text": "SHOP NOW",
             "item_btn_link": "#",
@@ -83,14 +83,14 @@
         "fbcce5c5-055a-480b-a66b-572bd2076fe3": {
           "type": "gift_box",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/Group_3.png",
+            "item_image": "shopify:\/\/shop_images\/fahmi-fakhrudin-nzyzAUsbV0M-unsplash.jpg",
             "item_image_position": "right",
             "background_color": "#f2edde",
-            "item_heading": "REAL ESTATE GIFTS",
+            "item_heading": "Sippin'",
             "item_heading_color": "#2b355a",
-            "item_subheading": "PERFECT FOR YOUR FRIENDS AND FAMILY WHO ARE NEW HOMEOWNERS",
+            "item_subheading": "PERFECT FOR those who need a little pick me up",
             "item_subheading_color": "#2b355a",
-            "item_text": "In support of Breast Cancer Awareness Month, BOXFOX is proud to announce that we will be donating 15% from each of your purchases of our best selling PAMPER \/\/ PINK BOXFOX to the Breast Cancer Research Foundation. Shop the PAMPER \/\/ PINK this month & help us in the fight to find the cure!",
+            "item_text": "From coffee to tea, this box will help your loved one go from morning to night with a smile.",
             "item_text_color": "#000000",
             "item_btn_text": "SHOP NOW",
             "item_btn_link": "#",
@@ -103,14 +103,14 @@
         "d6f176cc-17a8-4283-9965-ebe14cbf0cd3": {
           "type": "gift_box",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/Group_5.png",
+            "item_image": "shopify:\/\/shop_images\/noelle-australia-6ElnH17iD-8-unsplash.jpg",
             "item_image_position": "left",
             "background_color": "#2b355a",
-            "item_heading": "OPTION 3",
+            "item_heading": "Spa",
             "item_heading_color": "#f7f7f2",
-            "item_subheading": "",
+            "item_subheading": "perfect for those who need to relax",
             "item_subheading_color": "#f7f7f2",
-            "item_text": "In support of Breast Cancer Awareness Month, BOXFOX is proud to announce that we will be donating 15% from each of your purchases of our best selling PAMPER \/\/ PINK BOXFOX to the Breast Cancer Research Foundation. Shop the PAMPER \/\/ PINK this month & help us in the fight to find the cure!",
+            "item_text": "Relax to the max with the items included in this box.",
             "item_text_color": "#f2edde",
             "item_btn_text": "SHOP NOW",
             "item_btn_link": "#",
@@ -123,14 +123,14 @@
         "27385e5f-3815-483e-9575-c541f34c55f5": {
           "type": "gift_box",
           "settings": {
-            "item_image": "shopify:\/\/shop_images\/Group_7.png",
+            "item_image": "shopify:\/\/shop_images\/scott-webb-1ddol8rgUH8-unsplash.jpg",
             "item_image_position": "right",
             "background_color": "#ca8787",
-            "item_heading": "OPTION 4",
+            "item_heading": "home",
             "item_heading_color": "#f7f7f2",
-            "item_subheading": "",
+            "item_subheading": "perfect as a gift for a new homeowner",
             "item_subheading_color": "#f7f7f2",
-            "item_text": "In support of Breast Cancer Awareness Month, BOXFOX is proud to announce that we will be donating 15% from each of your purchases of our best selling PAMPER \/\/ PINK BOXFOX to the Breast Cancer Research Foundation. Shop the PAMPER \/\/ PINK this month & help us in the fight to find the cure!",
+            "item_text": "Need a great gift for someone who has recently moved house? Look no further.",
             "item_text_color": "#f7f7f2",
             "item_btn_text": "SHOP NOW",
             "item_btn_link": "#",
@@ -148,7 +148,7 @@
         "27385e5f-3815-483e-9575-c541f34c55f5"
       ],
       "settings": {
-        "heading": "WELCOME THEM HOME THE RIGHT WAY.",
+        "heading": "the perfect gift, THE RIGHT WAY.",
         "image_1": "shopify:\/\/shop_images\/Frame_8.png",
         "image_2": "shopify:\/\/shop_images\/Frame-new.png"
       }

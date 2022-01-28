@@ -47,7 +47,7 @@
     left: 75px;
 }
 .our-team-top-image {
-    top: -300px;
+    top: -175px;
     left: -50px;
     z-index: -1;
 }
@@ -72,6 +72,9 @@
     font-weight: bold;
 }
 @media (max-width: 960px) {
+    .our-team-wrapper {
+        padding-top: 50px;
+    }
     .our-team-heading {
         font-size: 40px;
         line-height: 1;
@@ -91,7 +94,8 @@
         padding: 40px 20px;
     }
     .our-team-top-image {
-        top: -200px;
+        top: -100px;
+        left: -30px;
     }
     .our-team-image .absolute-image img {
         max-width: 120px;
