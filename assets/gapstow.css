@@ -89,10 +89,16 @@ a.button {
     text-align: center;
     box-shadow: none;
 }
+.text-center {
+    text-align: center;
+}
 
 @media (min-width: 750px) {
     .medium-half {
         width: 50%;
+    }
+    .desktop-hide {
+        display: none;
     }
 }
 
@@ -107,6 +113,9 @@ a.button {
         font-size: 11px;
         min-height: 21px;
         padding: 0 31px;
+    }
+    .mobile-hide {
+        display: none;
     }
 }
 

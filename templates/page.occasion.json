@@ -1,0 +1,74 @@
+{
+  "sections": {
+    "step-bar": {
+      "type": "step-bar",
+      "settings": {}
+    },
+    "occasion": {
+      "type": "choose-your-occasion",
+      "blocks": {
+        "edd80478-0be4-47a6-b94c-1bf13d01cd64": {
+          "type": "text_and_image",
+          "settings": {
+            "title": "New home",
+            "item_text": "This box is great for giving to your family and friends who need love for their new home.",
+            "item_image": "shopify:\/\/shop_images\/Frame_2b6a060e-d1a4-4179-8dc0-8d376d91dcee.png",
+            "item_active_image": "shopify:\/\/shop_images\/Group.png",
+            "item_link": "shopify:\/\/pages\/about-us"
+          }
+        },
+        "5c7b9c49-b868-42f0-8afa-5a1148f0b051": {
+          "type": "text_and_image",
+          "settings": {
+            "title": "Real estate",
+            "item_text": "This box is great for giving to your family and friends who need love for their new home.",
+            "item_image": "shopify:\/\/shop_images\/Vector.png",
+            "item_active_image": "shopify:\/\/shop_images\/Vector_1_8be4aca5-a4e1-4ffa-9fc6-cb28725bb872.png",
+            "item_link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "bf03a0e9-390b-4460-a8e0-bfec6c9ad317": {
+          "type": "text_and_image",
+          "settings": {
+            "title": "Option3",
+            "item_text": "This box is great for giving to your family and friends who need love for their new home.",
+            "item_image": "shopify:\/\/shop_images\/filter_drama1.png",
+            "item_active_image": "shopify:\/\/shop_images\/filter_drama.png",
+            "item_link": "shopify:\/\/pages\/about-us"
+          }
+        },
+        "e7d17403-9235-482d-8db0-8beafff43921": {
+          "type": "text_and_image",
+          "settings": {
+            "title": "Option4",
+            "item_text": "This box is great for giving to your family and friends who need love for their new home.",
+            "item_image": "shopify:\/\/shop_images\/Frame_1_5bfc1e63-826c-4a37-bfcd-0749a529a790.png",
+            "item_active_image": "shopify:\/\/shop_images\/Frame_2_c3896335-8f11-4f5f-b84c-e9aedf6cb61b.png",
+            "item_link": "shopify:\/\/pages\/contact"
+          }
+        }
+      },
+      "block_order": [
+        "edd80478-0be4-47a6-b94c-1bf13d01cd64",
+        "5c7b9c49-b868-42f0-8afa-5a1148f0b051",
+        "bf03a0e9-390b-4460-a8e0-bfec6c9ad317",
+        "e7d17403-9235-482d-8db0-8beafff43921"
+      ],
+      "settings": {
+        "heading_above_text": "Step one:",
+        "heading": "Choose your occasion",
+        "left_image": "shopify:\/\/shop_images\/Frame-left_6a5237ad-5fd6-4a9a-b537-764b74d9a9d9.png",
+        "right_image": "shopify:\/\/shop_images\/Frame-right_bb979b8e-c028-4093-a8f0-2f38e1539101.png",
+        "center_image": "shopify:\/\/shop_images\/Frame_4.png",
+        "bottom_image": "shopify:\/\/shop_images\/Group_1_c8f472a5-4b45-4790-986f-ce05af470e82.png",
+        "btn_above_text": "Next step:",
+        "btn_text_desktop": "Confirm your items",
+        "btn_text_mobile": "See your box"
+      }
+    }
+  },
+  "order": [
+    "step-bar",
+    "occasion"
+  ]
+}

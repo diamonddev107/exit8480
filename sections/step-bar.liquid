@@ -1,0 +1,90 @@
+<div class="step-bar-section desktop-hide">
+    <div class="step-bar-wrapper">
+        {% for block in section.blocks %}
+            <div class="step-item {% if block.settings.active_step %} active-step {% endif %}">
+                <span class="step-text">{{ block.settings.title }}</span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<style>
+    .step-bar-section {
+        padding: 30px 0px;
+    }
+    .step-bar-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 30px;
+        border-top: 0.5px solid #2B355A;
+    }
+    .step-bar-wrapper .step-item {
+        padding-top: 15px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .step-bar-wrapper .step-item:before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        width: 10px;
+        height: 10px;
+        background: #2B355A;
+        border-radius: 50%;
+    }
+    .step-bar-wrapper .step-item.active-step:before {
+        background: #CA8787;
+    }
+    .step-bar-wrapper .step-item .step-text {
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        color: #2B355A;
+        text-transform: uppercase;
+    }
+    .step-bar-wrapper .step-item.active-step .step-text {
+        color: #CA8787;
+    }
+</style>
+{% schema %}
+{
+    "name": "Step bar",
+    "tag": "section",
+    "settings": [
+        
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "Text",
+            "limit": 4,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Heading",
+                    "default": "New home"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "active_step",
+                    "label": "Active step",
+                    "default": false
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name":"Step bar",
+            "blocks": [
+                {
+                    "type": "text"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

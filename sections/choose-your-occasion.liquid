@@ -1,0 +1,188 @@
+{{ 'section-occasion.css' | asset_url | stylesheet_tag }}
+
+{% assign cyo_main_content = '' %}
+{% assign cyo_options = '' %}
+
+{% for block in section.blocks %}
+    
+    {% if forloop.index == 1 %}
+        {% capture cyo_content %}
+            <div class="cyo-main-wrapper">
+                <div class="main-image">
+                    <img class="mobile-hide" src="{{ block.settings.item_image | img_url: '315x' }}" loading="lazy" alt="{{ block.settings.item_image.alt | escape }}">
+                    <img class="desktop-hide" src="{{ block.settings.item_active_image | img_url: '315x' }}" loading="lazy" alt="{{ block.settings.item_active_image.alt | escape }}">
+                </div>
+                <h3 class="h3 item-heading">{{ block.settings.title }}</h3>
+                <div class="item-text mobile-hide">
+                    <p>{{ block.settings.item_text }}</p>
+                </div>
+                <div class="cyo-center-image desktop-hide">
+                    <img src="{{ section.settings.center_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.center_image.alt | escape }}">
+                </div>
+            </div>
+        {% endcapture %}
+
+        {% assign cyo_main_content = cyo_main_content | append: cyo_content %}
+    {% endif %}
+
+    {% capture cyo_option %}
+        <div class="cyo-option-item text-center {% if forloop.index == 1 %} active-item {% endif %}" data-href="{{ block.settings.item_link }}">
+            <img class="normal-image {% if forloop.index == 1 %} deactive {% endif %}" src="{{ block.settings.item_image | img_url: '315x' }}" loading="lazy" alt="{{ block.settings.item_image.alt | escape }}">
+            <img class="active-image {% if forloop.index != 1 %} deactive {% endif %}" src="{{ block.settings.item_active_image | img_url: '315x' }}" loading="lazy" alt="{{ block.settings.item_active_image.alt | escape }}">
+            <h3 class="h3 item-heading {% if forloop.index == 1 %} active {% endif %}">{{ block.settings.title }}</h3>
+            <p class="item-text" style="display: none">{{ block.settings.item_text }}</p>
+        </div>
+    {% endcapture %}
+    
+    {% assign cyo_options = cyo_options | append: cyo_option %}
+
+{% endfor %}
+<div class="cyo-section">
+    <div class="cyo-header">
+        <div class="cyo-header-wrapper flex">
+            <div class="cyo-header-image">
+                <div class="absolute-wrapper left">
+                    <img src="{{ section.settings.left_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.left_image.alt | escape }}">
+                </div>
+            </div>
+            <div class="cyo-header-title">
+                <div class="cyo-title-wrapper">
+                    <h2 class="h1 cyo-heading">{{ section.settings.heading_above_text }}</h2>
+                    <h2 class="h1 cyo-heading medium">{{ section.settings.heading }}</h2>
+                </div>
+            </div>
+            <div class="cyo-header-image">
+                <div class="absolute-wrapper right">
+                    <img src="{{ section.settings.right_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.right_image.alt | escape }}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cyo-content">
+        <div class="cyo-content-main">
+            {{ cyo_main_content }}
+        </div>
+        <div class="cyo-content-options">
+            <div class="cyo-options-wrapper flex">
+                {{ cyo_options }}
+            </div>
+        </div>
+        <div class="cyo-content-bottom">
+            <div class="cyo-bottom-wrapper text-center">
+                <p class="mobile-hide">{{ section.settings.btn_above_text }}</p>
+                <div class="cyo-button">
+                    <a href="#" class="button button--primary mobile-hide">{{ section.settings.btn_text_desktop }}</a>
+                    <a href="#" class="button button--primary desktop-hide">{{ section.settings.btn_text_mobile }}</a>
+                </div>
+                <div class="cyo-bottom-image mobile-hide">
+                    <img src="{{ section.settings.bottom_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.bottom_image.alt | escape }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ 'occasion.js' | asset_url }}" defer="defer"></script>
+{% schema %}
+{
+    "name": "Occasion",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading_above_text",
+            "label": "Text above heading",
+            "default": "Step one:"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Choose your occasion"
+        },
+        {
+            "type": "image_picker",
+            "id": "left_image",
+            "label": "Left image"
+        },
+        {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Right image"
+        },
+        {
+            "type": "image_picker",
+            "id": "center_image",
+            "label": "Center image"
+        },
+        {
+            "type": "image_picker",
+            "id": "bottom_image",
+            "label": "Bottom image"
+        },
+        {
+            "type": "text",
+            "id": "btn_above_text",
+            "label": "Text above button",
+            "default": "Next step:"
+        },
+        {
+            "type": "text",
+            "id": "btn_text_desktop",
+            "label": "Desktop button text",
+            "default": "Confirm your items"
+        },
+        {
+            "type": "text",
+            "id": "btn_text_mobile",
+            "label": "Mobile button text",
+            "default": "See your box"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text_and_image",
+            "name": "Text and Image",
+            "limit": 4,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Heading",
+                    "default": "New home"
+                },
+                {
+                    "type": "text",
+                    "id": "item_text",
+                    "label": "Text",
+                    "default": "This box is great for giving to your family and friends who need love for their new home."
+                },
+                {
+                    "type": "image_picker",
+                    "id": "item_image",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "item_active_image",
+                    "label": "Active image"
+                },
+                {
+                    "type": "url",
+                    "id": "item_link",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name":"Occasion",
+            "blocks": [
+                {
+                    "type": "text_and_image"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
