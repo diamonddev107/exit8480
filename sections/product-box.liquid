@@ -1,0 +1,192 @@
+{{ 'section-product-box.css' | asset_url | stylesheet_tag }}
+<div class="product-box-section">
+    <div class="pbs-header">
+        <div class="pbs-header-wrapper flex">
+            <div class="pbs-header-image">
+                <div class="absolute-wrapper">
+                    <img src="{{ section.settings.desktop_image_1 | img_url: 'master' }}" class="mobile-hide" loading="lazy" alt="{{ section.settings.desktop_image_1.alt | escape }}">
+                </div>
+            </div>
+            <div class="pbs-header-title">
+                <div class="pbs-title-wrapper">
+                    <h2 class="h1 pbs-heading">{{ section.settings.heading }}</h2>
+                    <h3 class="h1 pbs-subheading mobile-hide">{{ section.settings.sub_heading }}</h3>
+                    <div class="pbs-button">
+                        <a href="javascript:;" class="btn-custom-add-to-cart button button--primary mobile-hide">{{ section.settings.atc_desktop_text }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pbs-header-image"></div>
+        </div>
+    </div>
+    <div class="pbs-content">
+        <div class="pbs-absolute-image mobile-hide" style="right: 0; top: 0;">
+            <img src="{{ section.settings.desktop_image_2 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.desktop_image_2.alt | escape }}">
+        </div>
+        <div class="pbs-absolute-image mobile-hide" style="top: 30%;">
+            <img src="{{ section.settings.desktop_image_3 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.desktop_image_3.alt | escape }}">
+        </div>
+        <div class="pbs-absolute-image desktop-hide" style="top: 0; left: -66px;">
+            <img src="{{ section.settings.mobile_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.mobile_image.alt | escape }}">
+        </div>
+        <div class="pbs-absolute-image desktop-hide" style="bottom: 0; right: 0; right: -54px;">
+            <img src="{{ section.settings.mobile_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.mobile_image.alt | escape }}">
+        </div>
+        <div class="pbs-content-wrapper" data-max="{{ section.blocks.size }}">
+            {% for block in section.blocks %}
+                <div class="pbs-item" data-index="{{ forloop.index }}">
+                    <div class="pbs-item-image">
+                        <img src="{{ block.settings.image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image.alt | escape }}">
+                    </div>
+                    <div class="pbs-item-text">
+                        <h3 class="h1 pbs-item-heading">{{ block.settings.title }}</h3>
+                        <span class="pbs-item-price">{{ block.settings.price }}</span>
+                    </div>
+                    <div class="hide pbs-item-modal">
+                        <span class="pbs-item-top-text">{{ block.settings.learn_more_about }}</span>
+                        <div class="pbs-item-description">{{ block.settings.description }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="pbs-bottom">
+        <div class="pbs-button">
+            <a href="javascript:;" class="btn-custom-add-to-cart button button--primary mobile-hide">{{ section.settings.atc_desktop_text }}</a>
+            <a href="javascript:;" class="btn-custom-add-to-cart button button--primary desktop-hide">{{ section.settings.atc_mobile_text }}</a>
+        </div>
+        <div class="pbs-border"></div>
+    </div>
+    <div class="pbi-modal" data-index="1">
+        <div class="pbi-modal-content">
+            <div class="pbi-btn-back desktop-hide"><span class="pbi-arrow"></span><span class="pbi-arrow-text">BACK</span></div>
+            <div class="pbi-btn-close-modal"></div>
+            <div class="pbs-absolute-image mobile-hide" style="left: 0; top: 100px; width: 40%; z-index: -1;">
+                <img src="{{ section.settings.modal_image_1 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.modal_image_1.alt | escape }}">
+            </div>
+            <div class="pbs-absolute-image mobile-hide" style="right: 0; top: 40%; width: 15%; z-index: -1;">
+                <img src="{{ section.settings.modal_image_2 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.modal_image_2.alt | escape }}">
+            </div>
+            <h3 class="h1 pbi-top-text mobile-hide"></h3>
+            <h2 class="h1 pbi-heading mobile-hide"></h2>
+            <div class="pbi-modal-image-wrapper">
+                <span class="pbi-btn-arrow prev desktop-hide"></span>
+                <div class="pbi-modal-image"></div>
+                <span class="pbi-btn-arrow next desktop-hide"></span>
+            </div>
+            <h2 class="h1 pbi-heading desktop-hide"></h2>
+            <div class="pbi-modal-text"></div>
+        </div>
+    </div>
+</div>
+<script src="{{ 'product-box.js' | asset_url }}" defer="defer"></script>
+{% schema %}
+{
+    "name": "Product box",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "New house"
+        },
+        {
+            "type": "text",
+            "id": "sub_heading",
+            "label": "Sub heading",
+            "default": "These are the items that will come in your box."
+        },
+        {
+            "type": "text",
+            "id": "atc_desktop_text",
+            "label": "Button text(Desktop)",
+            "default": "Add box to cart"
+        },
+        {
+            "type": "text",
+            "id": "atc_mobile_text",
+            "label": "Button text(Mobile)",
+            "default": "Add to cart"
+        },
+        {
+            "type": "header",
+            "content": "Desktop images"
+        },
+        {
+            "type": "image_picker",
+            "id": "desktop_image_1",
+            "label": "Desktop image 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "desktop_image_2",
+            "label": "Desktop image 2"
+        },
+        {
+            "type": "image_picker",
+            "id": "desktop_image_3",
+            "label": "Desktop image 3"
+        },
+        {
+            "type": "header",
+            "content": "Mobile image"
+        },
+        {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile image"
+        },
+        {
+            "type": "header",
+            "content": "Modal images"
+        },
+        {
+            "type": "image_picker",
+            "id": "modal_image_1",
+            "label": "Modal image 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "modal_image_2",
+            "label": "Mobile image 2"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "product_item",
+            "name": "Product item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Oh baby oh baby"
+                },
+                {
+                    "type": "text",
+                    "id": "price",
+                    "label": "Price",
+                    "default": "$13.50"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "learn_more_about",
+                    "label": "Learn more about",
+                    "default": "Learn more about"
+                },
+                {
+                   "type": "richtext",
+                    "id": "description",
+                    "label": "Description"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

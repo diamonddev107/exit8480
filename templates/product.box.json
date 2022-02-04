@@ -1,0 +1,21 @@
+{
+    "sections": {
+      "step-bar": {
+        "type": "step-bar",
+        "settings": {}
+      },
+      "product-box": {
+        "type": "product-box",
+        "settings": {}
+      },
+      "product-box-recommendations": {
+        "type": "product-box-recommendations",
+        "settings": {}
+      }
+    },
+    "order": [
+      "step-bar",
+      "product-box",
+      "product-box-recommendations"
+    ]
+  }

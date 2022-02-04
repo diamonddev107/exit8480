@@ -1,0 +1,83 @@
+{{ 'section-pbr.css' | asset_url | stylesheet_tag }}
+<div class="pbr-section">
+    <div class="pbr-wrapper">
+        <div class="pbr-absolute-image left">
+            <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt | escape }}">
+        </div>
+        <div class="pbr-absolute-image right">
+            <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image.alt | escape }}">
+        </div>
+        <h3 class="h1 pbr-top-text">{{ section.settings.top_text }}</h3>
+        <h2 class="h1 pbr-heading">{{ section.settings.heading }}</h2>
+        <div class="pbr-boxes">
+            {% for block in section.blocks %}
+                <div class="pbr-box-item">
+                    <a href="{{ block.settings.link }}">
+                        <img src="{{ block.settings.box_image | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.box_image.alt | escape }}">        
+                        <h3 class="h1 pbr-box-item-title">{{ block.settings.title }}</h3>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Box recommendations",
+    "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Browse our other boxes"
+        },
+        {
+            "type": "text",
+            "id": "top_text",
+            "label": "Top text",
+            "default": "Not sure?"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "box",
+            "name": "Box",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "New house box"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "box_image",
+                    "label": "Box image"
+                },
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name":"Box recommendations",
+            "blocks": [
+                {
+                    "type": "box"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

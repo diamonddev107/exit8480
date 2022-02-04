@@ -89,6 +89,7 @@
     top: 0;
     width: 100%;
     left: 0;
+    z-index: -1;
 }
 .cyo-content-bottom {
     padding-bottom: 80px;
@@ -98,6 +99,7 @@
     margin: 0 auto;
     padding: 100px 20px;
     position: relative;
+    z-index: 1;
 }
 .cyo-bottom-wrapper p {
     font-weight: bold;
