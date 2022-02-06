@@ -49,6 +49,7 @@
 }
 .pbr-box-item a>img {
     width: 100%;
+    border-radius: 50%;
 }
 .pbr-heading {
     text-transform: uppercase;
@@ -74,6 +75,7 @@
     }
     .pbr-box-item {
         padding-top: 30px;
+        width: 100% !important;
     }
     .pbr-box-item-title {
         margin-top: 5px;

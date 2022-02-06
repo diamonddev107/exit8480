@@ -10,13 +10,23 @@
         <h3 class="h1 pbr-top-text">{{ section.settings.top_text }}</h3>
         <h2 class="h1 pbr-heading">{{ section.settings.heading }}</h2>
         <div class="pbr-boxes">
-            {% for block in section.blocks %}
-                <div class="pbr-box-item">
-                    <a href="{{ block.settings.link }}">
-                        <img src="{{ block.settings.box_image | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.box_image.alt | escape }}">        
-                        <h3 class="h1 pbr-box-item-title">{{ block.settings.title }}</h3>
-                    </a>
-                </div>
+            
+            {% assign box_num = section.settings.collection.all_products_count %}
+            {% if request.path contains "products" %}
+                {% assign box_num = box_num | minus: 1 %}
+            {% endif %}
+
+            {% for rec_product in section.settings.collection.products %}
+                {% if request.path contains "products" and request.path contains rec_product.handle %}
+                    {% continue %}  
+                {% else %}
+                    <div class="pbr-box-item" style="width: calc(100% / {{ box_num }});">
+                        <a href="{{ rec_product.url | default: '#' }}">
+                            <img src="{{ rec_product.featured_media | img_url: 'master' }}" loading="lazy" alt="{{ rec_product.featured_media.alt | escape }}">        
+                            <h3 class="h1 pbr-box-item-title">{{ rec_product.title }}</h3>
+                        </a>
+                    </div>        
+                {% endif %}
             {% endfor %}
         </div>
     </div>
@@ -27,6 +37,11 @@
     "name": "Box recommendations",
     "tag": "section",
     "settings": [
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+        },
         {
             "type": "text",
             "id": "heading",
@@ -45,38 +60,9 @@
             "label": "Image"
         }
     ],
-    "blocks": [
-        {
-            "type": "box",
-            "name": "Box",
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "title",
-                    "label": "Title",
-                    "default": "New house box"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "box_image",
-                    "label": "Box image"
-                },
-                {
-                    "type": "url",
-                    "id": "link",
-                    "label": "Link"
-                }
-            ]
-        }
-    ],
     "presets": [
         {
-            "name":"Box recommendations",
-            "blocks": [
-                {
-                    "type": "box"
-                }
-            ]
+            "name":"Box recommendations"
         }
     ]
 }

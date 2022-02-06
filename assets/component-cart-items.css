@@ -380,6 +380,9 @@ cart-remove-button .icon-remove {
   display: flex;
   align-items: flex-end;
 }
+#main-cart-footer .cart__footer {
+  padding: 4rem 0;
+}
 .cart__footer>div:only-child {
   margin: 0 auto;
 }
