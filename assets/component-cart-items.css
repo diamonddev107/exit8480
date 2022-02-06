@@ -321,3 +321,173 @@ cart-remove-button .icon-remove {
     width: 60%;
   }
 }
+
+/* custom cart page */
+.cart-items thead {
+  display: none;
+}
+.cart-item__image {
+  border-radius: 50%;
+  border: 5px solid #ADCEB0;
+}
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart-item__media {
+  width: 300px;
+}
+.cart-item__details>* {
+  max-width: 100%;
+}
+.cart-item .cart-item__details {
+  padding: 40px;
+  text-align: center;
+  background: #F2EDDE;
+  border: 1px solid #CA8787;
+  width: 90%;
+  margin-top: 30px;
+}
+.cart-item .cart-item__name {
+  font-family: "Darker Grotesque";
+  line-height: 33px;
+  color: #2B355A;
+  text-transform: uppercase;
+}
+.cart-item .cart-item__subheading, .cart-item .product-option {
+  font-family: 'Darker Grotesque Regular';
+  line-height: 33px;
+  color: #2B355A;
+  text-transform: uppercase;
+}
+.cart-item.cart-item-one .cart-item__name, .cart-item.cart-item-one .cart-item__subheading, .cart-item.cart-item-one .product-option {
+  font-size: 40px;
+}
+.cart-item.cart-item-two .cart-item__name, .cart-item.cart-item-two .cart-item__subheading, .cart-item.cart-item-two .product-option {
+  font-size: 30px;
+}
+.cart-item.cart-item-three .cart-item__name, .cart-item.cart-item-three .cart-item__subheading, .cart-item.cart-item-three .product-option {
+  font-size: 24px;
+}
+.cart-item .cart-item__subheading {
+  margin-bottom: 30px;
+}
+.cart-item .product-option {
+  display: inline;
+}
+.cart-items tbody {
+  display: flex;
+  align-items: flex-end;
+}
+.cart__footer>div:only-child {
+  margin: 0 auto;
+}
+.cart__footer .totals {
+  justify-content: space-between;
+}
+.cart__footer .tax-note {
+  text-align: center;
+  font-family: "Darker Grotesque Regular";
+  color: #2b355a;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.cart__footer .cart__ctas button {
+  background: #F7F7F2;
+  border: 2px solid #2B355A;
+  box-shadow: none;
+  font-family: 'Space Mono';
+  font-weight: bold;
+  font-size: 29px;
+  color: #2B355A;
+  text-transform: uppercase;
+}
+.cart__footer .cart__ctas .button:not([disabled]):hover {
+  box-shadow: none;
+  border-width: 4px;
+}
+.cart__footer .totals>h3, .cart__footer .totals__subtotal-value {
+  font-family: "Darker Grotesque";
+  font-size: 22px;
+  color: #2B355A;
+  text-transform: uppercase;
+}
+@media (min-width: 750px) {
+  .cart-item.cart-item-two {
+    width: 50%;
+  }
+  .cart-item.cart-item-three {
+    width: 33.333%;
+  }
+  cart-items.scrollable {
+    overflow: hidden;
+    overflow-x: scroll;
+    cursor: grab;
+  }
+  .cart-item.cart-item-three.cart-item-multi {
+    flex: 0 0 30%;
+  }
+
+  /* width */
+  cart-items.scrollable::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  /* Track */
+  cart-items.scrollable::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+  cart-items.scrollable::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+
+  /* Handle on hover */
+  cart-items.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}
+@media (max-width: 749px) {
+  .cart-item .cart-item__details, .cart-item .cart-item__media {
+    width: 100%;
+  }
+  .cart-item .cart-item__details {
+    margin: 0;
+    padding: 20px;
+  }
+  .cart-item .cart-item__media {
+    text-align: center;
+    padding-top: 30px;
+  }
+  .cart-item .cart-item__image {
+    max-width: 120px;
+  }
+  .cart-item .cart-item__name {
+    font-size: 15px !important;
+    line-height: 14px;
+  }
+  .cart-item .cart-item__subheading, .cart-item .product-option {
+    font-size: 12px !important;
+    line-height: 14px;
+  }
+  .cart-item .cart-item__subheading {
+    margin-bottom: 10px;
+  }
+  cart-items.page-width {
+    padding: 0 30px;
+  }
+  .cart-items tbody {
+    display: block;
+  }
+  .cart__footer .cart__ctas button {
+    font-size: 12px;
+  }
+  .cart__footer .totals>h3, .cart__footer .totals__subtotal-value {
+    font-size: 15px;
+  }
+  #main-cart-footer {
+    padding: 0px 30px;
+  }
+}

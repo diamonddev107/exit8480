@@ -1,5 +1,6 @@
 {{ 'section-product-box.css' | asset_url | stylesheet_tag }}
 <div class="product-box-section">
+    <input type="hidden" id="product_box_variant_id" value="{{ product.variants.first.id }}">
     <div class="pbs-header">
         <div class="pbs-header-wrapper flex">
             <div class="pbs-header-image">

@@ -1,7 +1,7 @@
 {
   "sections": {
     "cart-items": {
-      "type": "main-cart-items",
+      "type": "main-cart-boxes",
       "settings": {}
     },
     "cart-footer": {
@@ -22,17 +22,14 @@
       ],
       "settings": {}
     },
-    "featured-products": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "image_ratio": "square"
-      }
+    "product-box-recommendations": {
+      "type": "product-box-recommendations",
+      "settings": {}
     }
   },
   "order": [
     "cart-items",
     "cart-footer",
-    "featured-products"
+    "product-box-recommendations"
   ]
 }
