@@ -14,14 +14,24 @@
 
 @media screen and (max-width: 749px) {
   .footer .grid {
-    display: block;
+    display: flex;
+    align-items: center;
     margin-left: 0;
   }
-
+  .footer-block__heading {
+    display: none;
+  }
   .footer-block.grid__item {
     padding: 0;
-    margin: 4rem 0;
-    width: 100%;
+    margin: 0;
+    width: 50%;
+  }
+  .footer-block.grid__item.footer-image {
+    order: 1;
+    width: 25%;
+  }
+  .footer-block.grid__item.footer-block--menu {
+    width: 25%;
   }
 
   .footer-block.grid__item:first-child {
@@ -30,8 +40,10 @@
 
   .footer__content-top {
     padding-bottom: 3rem;
-    padding-left: calc(4rem / var(--font-body-scale));
-    padding-right: calc(4rem / var(--font-body-scale));
+    /* padding-left: calc(4rem / var(--font-body-scale));
+    padding-right: calc(4rem / var(--font-body-scale)); */
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -40,6 +52,7 @@
     margin-left: -3rem;
     row-gap: 6rem;
     margin-bottom: 0;
+    align-items: center;
   }
 
   .footer__content-top .grid__item {
@@ -158,6 +171,7 @@
   margin-bottom: 2rem;
   margin-top: 0;
   font-size: calc(var(--font-heading-scale) * 1.6rem);
+  color: #ADCEB0;
 }
 
 @media screen and (min-width: 990px) {
@@ -448,18 +462,25 @@ noscript .localization-selector.link {
     text-decoration-thickness: 0.2rem;
   }
 }
-
+.footer-block__details-content .list-menu__item--link {
+  font-family: 'Darker Grotesque Regular';
+  line-height: 35px;
+  letter-spacing: 0.03em;
+  color: #F7F7F2;
+  font-size: 12px;
+}
 @media screen and (max-width: 989px) {
   .footer-block__details-content .list-menu__item--link {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding: 0;
   }
 }
 
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 21px;
   }
 
   .footer-block__details-content > :first-child .list-menu__item--link {
@@ -470,6 +491,12 @@ noscript .localization-selector.link {
 @media screen and (max-width: 749px) {
   .footer-block-image {
     text-align: center;
+  }
+  .footer-block__details-content {
+    margin: 0;
+  }
+  .footer-block__details-content .list-menu__item--link {
+    line-height: 20px;
   }
 }
 

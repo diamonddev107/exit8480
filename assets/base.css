@@ -1892,7 +1892,7 @@ input[type='checkbox'] {
     padding-bottom: 2rem;
   }
 
-  .header--has-menu:not(.header--middle-left) {
+  .header--has-menu:not(.header--middle-left, .header--middle-center) {
     padding-bottom: 0;
   }
 
@@ -2192,7 +2192,11 @@ details[open] > .header__icon--menu .icon-hamburger {
   grid-area: navigation;
   display: none;
 }
-
+.header__inline-menu.second {
+  margin-left: -1.2rem;
+  grid-area: second-navigation;
+  display: none;
+}
 .header--top-center .header__inline-menu,
 .header--top-center .header__heading-link {
   margin-left: 0;

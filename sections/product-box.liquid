@@ -9,7 +9,7 @@
             </div>
             <div class="pbs-header-title">
                 <div class="pbs-title-wrapper">
-                    <h2 class="h1 pbs-heading">{{ section.settings.heading }}</h2>
+                    <h2 class="h1 pbs-heading">{{ product.title }}</h2>
                     <h3 class="h1 pbs-subheading mobile-hide">{{ section.settings.sub_heading }}</h3>
                     <div class="pbs-button">
                         <a href="javascript:;" class="btn-custom-add-to-cart button button--primary mobile-hide">{{ section.settings.atc_desktop_text }}</a>
@@ -32,19 +32,21 @@
         <div class="pbs-absolute-image desktop-hide" style="bottom: 0; right: 0; right: -54px;">
             <img src="{{ section.settings.mobile_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.mobile_image.alt | escape }}">
         </div>
-        <div class="pbs-content-wrapper" data-max="{{ section.blocks.size }}">
-            {% for block in section.blocks %}
+
+        {% assign collection_handle = product.metafields.my_fields.items_group %}
+        <div class="pbs-content-wrapper" data-max="{{ collections[collection_handle].all_products_count }}">
+            {% for item_product in collections[collection_handle].products %}
                 <div class="pbs-item" data-index="{{ forloop.index }}">
                     <div class="pbs-item-image">
-                        <img src="{{ block.settings.image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image.alt | escape }}">
+                        <img src="{{ item_product.featured_media | img_url: 'master' }}" loading="lazy" alt="{{ item_product.featured_media.alt | escape }}">
                     </div>
                     <div class="pbs-item-text">
-                        <h3 class="h1 pbs-item-heading">{{ block.settings.title }}</h3>
-                        <span class="pbs-item-price">{{ block.settings.price }}</span>
+                        <h3 class="h1 pbs-item-heading">{{ item_product.title }}</h3>
+                        <span class="pbs-item-price">{{ item_product.price | money | strip_html }}</span>
                     </div>
                     <div class="hide pbs-item-modal">
-                        <span class="pbs-item-top-text">{{ block.settings.learn_more_about }}</span>
-                        <div class="pbs-item-description">{{ block.settings.description }}</div>
+                        <span class="pbs-item-top-text">{{ section.settings.learn_more_about }}</span>
+                        <div class="pbs-item-description">{{ item_product.description }}</div>
                     </div>
                 </div>
             {% endfor %}
@@ -87,15 +89,15 @@
     "settings": [
         {
             "type": "text",
-            "id": "heading",
-            "label": "Heading",
-            "default": "New house"
-        },
-        {
-            "type": "text",
             "id": "sub_heading",
             "label": "Sub heading",
             "default": "These are the items that will come in your box."
+        },
+        {
+            "type": "text",
+            "id": "learn_more_about",
+            "label": "Learn more about",
+            "default": "Learn more about"
         },
         {
             "type": "text",
@@ -150,42 +152,6 @@
             "type": "image_picker",
             "id": "modal_image_2",
             "label": "Mobile image 2"
-        }
-    ],
-    "blocks": [
-        {
-            "type": "product_item",
-            "name": "Product item",
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "title",
-                    "label": "Title",
-                    "default": "Oh baby oh baby"
-                },
-                {
-                    "type": "text",
-                    "id": "price",
-                    "label": "Price",
-                    "default": "$13.50"
-                },
-                {
-                    "type": "image_picker",
-                    "id": "image",
-                    "label": "Image"
-                },
-                {
-                    "type": "text",
-                    "id": "learn_more_about",
-                    "label": "Learn more about",
-                    "default": "Learn more about"
-                },
-                {
-                   "type": "richtext",
-                    "id": "description",
-                    "label": "Description"
-                }
-            ]
         }
     ]
 }

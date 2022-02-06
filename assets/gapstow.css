@@ -92,13 +92,80 @@ a.button {
 .text-center {
     text-align: center;
 }
-
+.announcement-bar {
+    border: none;
+}
+.header__menu-item span {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.header__active-menu-item {
+    color: #CA8787;
+    text-decoration: none;
+}
+.announcement-bar__message {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: #2B355A;
+}
+.cart-count-bubble {
+    background: #2b355a;
+}
+.cart-count-bubble span {
+    color: white;
+}
+.header__icon--menu span {
+    color: #A2B699;
+}
+.footer__content-bottom {
+    display: none;
+}
+.footer-block__details-content p {
+    font-family: 'Darker Grotesque Regular';
+    line-height: 35px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #F7F7F2;
+}
+@media (min-width: 990px) {
+    .header--middle-left {
+        grid-template-areas: "heading navigation second-navigation icons";
+    }
+    .header--top-left {
+        grid-template-areas: 
+            "heading icons"
+            "navigation second-navigation";
+    }
+    .header--top-center {
+        grid-template-areas:
+        "left-icon heading icons"
+        "navigation navigation navigation"
+        "second-navigation second-navigation second-navigation";
+    }
+    .header--middle-center {
+        grid-template-areas: "navigation heading second-navigation icons";
+        grid-template-columns: 2fr 1fr 1.5fr 0.5fr;
+    }
+    .header--middle-center .header__heading-link, .header--middle-center .header__heading {
+        justify-self: center;
+    }
+    .header--middle-center .header__inline-menu.second {
+        justify-self: right;
+    }
+    .header__inline-menu.second {
+        display: block;
+    }
+}
 @media (min-width: 750px) {
     .medium-half {
         width: 50%;
     }
     .desktop-hide {
         display: none;
+    }
+    .footer-block__details-content p {
+        font-size: 28px;
     }
 }
 
@@ -116,6 +183,9 @@ a.button {
     }
     .mobile-hide {
         display: none;
+    }
+    .footer-block__details-content p {
+        line-height: 12px;
     }
 }
 
