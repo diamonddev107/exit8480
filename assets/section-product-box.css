@@ -76,7 +76,7 @@ a.btn-custom-add-to-cart {
     margin: 25px 0px;
 }
 .pbs-item-price {
-    font-family: "Darker Grotesque";
+    font-family: "Calder Dark";
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
@@ -146,6 +146,9 @@ a.btn-custom-add-to-cart {
 .pbi-heading {
     text-align: center;
     text-transform: uppercase;
+}
+.pbi-modal-text {
+    font-family: 'Calder Dark';
 }
 body.pbi-modal-opened {
     height: 100vh;
@@ -227,10 +230,10 @@ div.pbi-btn-close-modal {
     }
     .pbs-item-heading  {
         font-size: 12px;
-        font-family: 'Space Mono';
+        font-family: 'Calder Dark';
     }
     .pbs-item-price {
-        font-family: 'Space Mono';
+        font-family: 'Calder Dark';
         font-size: 12px;
         font-weight: normal;
     }
@@ -259,7 +262,7 @@ div.pbi-btn-close-modal {
         display: none;
     }
     .pbi-heading {
-        font-family: "Space Mono";
+        font-family: "Calder Dark";
         font-size: 16px;
         line-height: 20px;
         letter-spacing: 0.08em;
@@ -309,7 +312,7 @@ div.pbi-btn-close-modal {
         transform: rotate(45deg);
     }
     .pbi-arrow-text {
-        font-family: "Space Mono";
+        font-family: "Calder Dark";
         font-weight: normal;
         font-size: 10px;
         color: #CA8787;

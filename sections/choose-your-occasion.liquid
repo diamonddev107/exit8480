@@ -2,10 +2,11 @@
 
 {% assign cyo_main_content = '' %}
 {% assign cyo_options = '' %}
-
+{% assign active_link = '' %}
 {% for block in section.blocks %}
     
     {% if forloop.index == 1 %}
+    {% assign active_link = block.settings.item_link %}
         {% capture cyo_content %}
             <div class="cyo-main-wrapper">
                 <div class="main-image">
@@ -71,8 +72,8 @@
             <div class="cyo-bottom-wrapper text-center">
                 <p class="mobile-hide">{{ section.settings.btn_above_text }}</p>
                 <div class="cyo-button">
-                    <a href="#" class="button button--primary mobile-hide">{{ section.settings.btn_text_desktop }}</a>
-                    <a href="#" class="button button--primary desktop-hide">{{ section.settings.btn_text_mobile }}</a>
+                    <a href="{{ active_link }}" class="button button--primary mobile-hide">{{ section.settings.btn_text_desktop }}</a>
+                    <a href="{{ active_link }}" class="button button--primary desktop-hide">{{ section.settings.btn_text_mobile }}</a>
                 </div>
                 <div class="cyo-bottom-image mobile-hide">
                     <img src="{{ section.settings.bottom_image | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.bottom_image.alt | escape }}">
