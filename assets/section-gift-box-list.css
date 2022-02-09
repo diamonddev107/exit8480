@@ -7,6 +7,9 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.gbl-item:last-child .gbl-item-image {
+    overflow: hidden;
+}
 .gbl-top {
     position: relative;
     overflow: hidden;
