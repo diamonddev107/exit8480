@@ -62,6 +62,7 @@ a.btn-custom-add-to-cart {
 .pbs-item {
     width: calc((100% / 3) - 50px);
     margin: 0 25px 50px;
+    z-index: 1;
 }
 .pbs-item:hover {
     cursor: pointer;

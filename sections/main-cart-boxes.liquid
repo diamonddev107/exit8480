@@ -78,7 +78,7 @@
                             </div>
                           {%- endfor -%}
                         {%- endif -%}
-
+                        {% assign properties_len = item.properties | size %}
                         {%- for property in item.properties -%}
                           {%- assign property_first_char = property.first | slice: 0 -%}
                           {%- if property.last != blank and property_first_char != '_' -%}
@@ -89,7 +89,7 @@
                                     {{ property.last | split: '/' | last }}
                                   </a>
                                 {%- else -%}
-                                  {{ property.last }}{% if forloop.index != item.properties.size %}, {% endif %}
+                                  {{ property.last }}{% if forloop.index != properties_len %}, {% endif %}
                                 {%- endif -%}
                               </dd>
                             </div>
